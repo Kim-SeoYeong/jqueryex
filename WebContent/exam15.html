@@ -17,5 +17,40 @@
 	<input id="btn" type="button" VALUE="li요소추가" />
 </body>
 
+<script type="text/javascript">
+	$("#btn").on("click", function(){
+		console.log("버튼클릭");
+		
+		//<ul>안의 뒤에 붙여주는것
+		$("ul").append("<li>다섯번째입니다.</li>");
+		$("ul").append("<li>여섯번째입니다.</li>");
+		$("ul").append("<li>일곱번째입니다.</li>");
+	});	
+	
+	/*
+	$("li").on("click", function(){
+		//console.log("li클릭");
+		var str = $(this).text();
+		console.log(str)
+	});
+	*/
+	
+	//ul이 받은거지만 그 아래 li한테 일처리를 넘겨줌. (this가 li가 되는것.)
+	$("ul").on("click", "li", function(){
+		//console.log("ul 클릭");
+		//console.log($(this));
+		
+		var str = $(this).text();
+		console.log(str);
+		
+	});
+	
+	/*
+	<li>다섯번째아이템입니다.</li>
+	<li>여섯번째아이템입니다.</li>
+	<li>여섯번째아이템입니다.</li>
+	*/
+
+</script>
 
 </html>

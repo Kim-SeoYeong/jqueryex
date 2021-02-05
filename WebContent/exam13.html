@@ -7,12 +7,29 @@
 </head>
 <body>
 	<div>
-		<input id="btn" type="button" VALUE="js테스트버튼" />
+		<button id="btn" type="button">js테스트버튼</button>
 		<h1 id="display">이름출력영역</h1>
 	</div>
 
 </body>
 
+<script type="text/javascript">
+
+	var tmp = $("#btn");
+	console.log(tmp);
+
+	//$("#display").text("홍길동");
+	
+	$("#btn").on("click", function(){
+		//해야할일 코딩
+		console.log("버튼클릭");
+		$("#display").text("홍길동,");
+		$("#display").css("color", "red");
+		$("#display").prepend("김서영,");
+		$("#display").append("유재석");
+	});
+
+</script>
 
 
 </html>

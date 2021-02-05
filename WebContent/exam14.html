@@ -17,6 +17,46 @@
 
 </body>
 
+<script type="text/javascript">
+	/*
+	$("#first").on("click",function(){
+		console.log("id=first");
+	});
+
+	$("#second").on("click", function(){
+		console.log("id=second");
+	});
+	*/
+	
+	/*
+	$("li").on("click", function(){
+		//console.log("li 클릭");
+		
+		//지금 이벤트가 발생한 얘를 구체적으로 알려준다.
+		var str = $(this);
+		console.log(str);
+		
+		//해당 class의 속성값을 알려줌
+		var value = $(this).attr("class");
+		console.log(value);
+		
+	});
+	*/
+	
+	$("li").on("click", function(){
+		console.log("클릭");
+		
+		console.log($(this).attr("id"));
+		
+		$(this).text("김서영");
+	});
+	
+	
+	//var tags = $("li");
+	//console.log(tags);
+	
+	
+</script>
 
 
 </html>

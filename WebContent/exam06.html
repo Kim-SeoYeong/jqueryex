@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1"> abcdefghijklmn </p>
+	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
+</body>
+	
+<script type="text/javascript">
+	/*
+	var tags = $("#p1");
+	console.log(tags);
+	*/
+	
+	//태그 사이에 글을 넣을때 text를 씀
+	$("#p1").text("가나다라마바사");		//abcdefghijklmn가 가나다라마바사로 바뀜!
+	
+	//태그 내부에 글자를 읽어오고 싶을때는 text안에 아무것도 안적으면됨.
+	var str = $("#p2").text();
+	console.log(str);
+</script>
+
+</html>

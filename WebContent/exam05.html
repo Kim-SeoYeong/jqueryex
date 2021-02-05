@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+	</ul>
+</body>
+	
+<script type="text/javascript">
+	//$("[속성이름]")
+	//var tags = $("[class]");
+	//console.log(tags);
+	
+	//class 속성이 들어간 태그들만 red 컬러로 바꾼다.
+	$("[class]").css("color", "red");
+	
+	//class 이름이 first인 애들만 blue
+	//$(".first").css("color", "blue");
+	
+	//전체 속성 중에 first인 애들만 색상을 바꾸고싶을때
+	$("[class='first']").css("color", "blue");
+	
+	
+</script>
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>변수의 범위</h1>
+
+	<script type="text/javascript">
+		/*
+		//상황 1번
+		
+		var name = "global";
+		
+		//함수 정의, 바로실행되지 않는다, 정의부분이 해석만된다.
+		function checkscope() {
+			var name = "local";
+			console.log(name);
+		}
+		
+		checkscope();	//name --> local
+		
+		console.log(name);	//name --> global
+		*/
+		
+		
+		//상황 2번
+		
+		var name = "global";	//전역변수
+		
+		//함수정의
+		function checkscope() {
+			//var이 달리면 전역변수라 괄호가 닫히면 사라짐. var가 안붙으면 지역변수가 되어서 괄호가 끝나도 계속 변수 값이 살아있음.
+			name = "local";		//앞에 var을 안붙이고 선언하면 기존에 name변수가 있으면 그 위에 덮어씌우고 없으면 새로 name이라는 변수를 생성함. (지역변수) --> 괄호가 닫혀도 계속 살아있음
+			name2 = "로컬";		//기존에 name2라는 변수가 선언되어있지 않기때문에 name2가 새로 생성됨. (지역변수) --> 괄호가 닫혀도 계속 살아있음
+		}
+		
+		checkscope();
+		
+		console.log(name);
+		console.log(name2);
+		
+	</script>
+</body>
+</html>

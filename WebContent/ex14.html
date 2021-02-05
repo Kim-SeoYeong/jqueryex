@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>이벤트</h1>
+	
+	<h2>h2태그_1</h2>
+	<h2>h2태그_2</h2>
+	<h2>h2태그_3</h2>
+	
+	<h3 class="tagh3">h3태그_1</h3>
+	<h3 class="tagh3">h3태그_2</h3>
+	
+	<!-- ~~ 할때 -->
+	<!-- 마우스를 클릭할때 ~~가 실행되라  -->
+	<!-- 키보드를 입력할때 ~~가 실행되라 -->
+	<!-- 마우스를 드래그할때 ~~가 실행되라  -->
+	<div>
+		<button id="btn">자바스크립트 테스트 버튼</button>
+	</div>
+	
+	<p id="display">
+	
+	</p>
+	
+	<p id="display2">
+	
+	</p>
+	
+	<script type="text/javascript">
+		//~~ 할때
+		//마우스를 클릭할때 ~~가 실행되라
+		//키보드를 입력할때 ~~가 실행되라
+		//마우스를 드래그할때 ~~가 실행되라
+		
+		//윈도우에 그림이 다 그려지면 그 후에 작동해라. window.onload
+		//문서가 로딩되었을때 
+		window.onload = function(){
+			
+			//id값으로 체크할 때
+			var testButton = document.getElementById("btn");
+			var textArea = document.getElementById("display");
+			//console.log(testButton);
+			//console.log(textArea);
+			
+			//태그 h2 tag 
+			//[<h2>h2태그_1</h2>, <h2>h2태그_2</h2>, <h3>h2태그_3</h3>]
+			//id말고 태그로 잡아보기
+			var tagArray = document.getElementsByTagName("h2");
+			console.log(tagArray);
+			
+			//태그h3 class
+			var tag3Array = document.getElementsByClassName("tagh3");
+			var textArea2 = document.getElementById("display2");
+			console.log(tag3Array);
+			
+			//기능은 정의되고 클릭이 되면 작동된다.
+			//testButton을 클릭했을때 ~하도록 한다
+			testButton.onclick = function(){
+				console.log("버튼 클릭");
+				//textArea에 정의된 문자열이 출력된다.
+				textArea.innerHTML="<font color='#ff0000'>안녕하세요</font>";
+			};
+			
+			//h2태그_1 클릭했을 때
+			tagArray[0].onclick = function(){
+				console.log("h2태그_1");
+				textArea.innerHTML="<font color='#00ff00'>h2태그_1</font>";
+			};		
+			
+			//h2태그_2 클릭했을 때
+			tagArray[1].onclick = function() {
+				console.log("h2태그_2");
+				textArea.innerHTML="<font color='#0000ff'>h2태그_2</font>";
+			}
+			
+			//h2태그_3 클릭했을 때
+			tagArray[2].onclick = function() {
+				console.log("h2태그_3");
+				textArea.innerHTML="<font color='#ff00ff'>h2태그_3</font>";
+			}		
+			
+			//h3태그_1 클릭했을때
+			tag3Array[0].onclick = function() {
+				console.log("네이버");
+				textArea2.innerHTML="<a href='http://www.naver.com' target='_blank'>네이버</a>";
+			}
+			
+			//h3태그_2 클릭했을때
+			tag3Array[1].onclick = function() {
+				console.log("다음");
+				textArea2.innerHTML="<a href='http://www.daum.net'>다음</a>";
+			}
+
+			
+			/*
+			textArea.onclick = function(){
+				textArea.innerHTML="<font color='00ff00'>김서영</font>";
+			};
+			*/
+		};
+		
+	</script>
+</body>
+</html>
